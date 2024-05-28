@@ -1,20 +1,45 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya umum untuk body */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
+
+/* Gaya untuk kontainer */
 .container {
     max-width: 600px;
+    width: 100%;
     margin: auto;
     padding: 20px;
+    background-color: white;
     border: 1px solid #ccc;
     border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+/* Gaya untuk input dan textarea */
 input, textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
+    box-sizing: border-box;
 }
+
+/* Gaya untuk tombol */
 button {
     padding: 10px 20px;
     background-color: #007BFF;
@@ -22,7 +47,41 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
 button:hover {
     background-color: #0056b3;
+}
+
+/* Media Queries untuk layar kecil */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    input, textarea {
+        margin: 8px 0;
+        padding: 8px;
+    }
+
+    button {
+        padding: 10px;
+    }
+}
+
+/* Media Queries untuk layar sangat kecil */
+@media (max-width: 400px) {
+    .container {
+        padding: 10px;
+    }
+
+    input, textarea {
+        margin: 5px 0;
+        padding: 6px;
+    }
+
+    button {
+        padding: 8px;
+    }
 }
